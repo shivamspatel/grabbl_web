@@ -3,6 +3,7 @@
 import { Button, useMediaQuery } from "@relume_io/relume-ui";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import GrabblLogo from "../../../assets/Grabbl.svg";
 
 const useRelume = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ export function Navbar1() {
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <a href="#">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/logo-image.svg"
+              src={GrabblLogo}
               alt="Logo image"
             />
           </a>
@@ -129,6 +130,12 @@ export function Navbar1() {
             className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
           >
             Blogs
+          </a>
+          <a
+            href="#"
+            className="block py-3 text-md first:pt-7 lg:px-4 lg:py-2 lg:text-base first:lg:pt-2"
+          >
+            Contact Us
           </a>
         </motion.div>
         <div className="hidden justify-self-end lg:block">

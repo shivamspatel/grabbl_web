@@ -30,7 +30,6 @@ const useCarousel = () => {
   }, [api]);
 
   const handleDotClick = (index) => () => {
-    // No TypeScript annotation
     if (api) {
       api.scrollTo(index);
     }
@@ -46,7 +45,7 @@ const useCarousel = () => {
 };
 
 export function Testimonial16() {
-  const useCarousel = useCarousel();
+  const carousel = useCarousel();
   return (
     <section
       id="relume"
@@ -54,7 +53,7 @@ export function Testimonial16() {
     >
       <div className="container">
         <Carousel
-          setApi={useCarousel.setApi}
+          setApi={carousel.setApi}
           opts={{ loop: true, align: "start" }}
           className="overflow-hidden"
         >
@@ -146,12 +145,12 @@ export function Testimonial16() {
             <div className="absolute top-0 flex w-full items-start justify-between md:top-auto md:bottom-0 md:items-end">
               <div className="mt-2.5 flex w-full items-start justify-start md:mt-0 md:mb-2.5">
                 <button
-                  onClick={useCarousel.handleDotClick(0)}
-                  className={useCarousel.dotClassName(0)}
+                  onClick={carousel.handleDotClick(0)}
+                  className={carousel.dotClassName(0)}
                 />
                 <button
-                  onClick={useCarousel.handleDotClick(1)}
-                  className={useCarousel.dotClassName(1)}
+                  onClick={carousel.handleDotClick(1)}
+                  className={carousel.dotClassName(1)}
                 />
               </div>
               <div className="flex items-end justify-end gap-2 md:gap-4">

@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./public/index.html",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@relume_io/relume-ui/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     screens: {
       sm: "480px",
@@ -64,6 +69,11 @@ module.exports = {
     },
 
     extend: {
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+
+      },
+
       spacing: {
         px: "1px", // 1px
         0: "0px", // 0px
